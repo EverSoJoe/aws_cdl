@@ -4,7 +4,7 @@ Simple library to make deployment of Cloudformation templates programmatically e
 It also brings tools to upload and delete AWS Lambda code
 
 ## Basic usage
-```
+```python
 import aws_cdl
 from datetime import datetime
 
