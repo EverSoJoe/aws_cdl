@@ -27,7 +27,7 @@ cfn_client = aws_cdl.create_cf_client(PROFILE, REGION)
 if delete_stack:
     aws_cdl.delete_stack(cfn_client, STACK_NAME)
 else:
-    aws_cdl.upload_lambda_package(PROFILE, LAMBDA_FOLDER, S3_BUCKET, S3_KEY, REGION)
+    aws_cdl.upload_lambda(PROFILE, LAMBDA_FOLDER, S3_BUCKET, S3_KEY, REGION)
     try:
         aws_cdl.create_update_stack(cfn_client, TEMPLATE_FILE, PARAMETERS, STACK_NAME, FORCE)
     except Exception as e:
